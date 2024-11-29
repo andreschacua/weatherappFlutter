@@ -4,7 +4,7 @@ import 'package:weatherapp/models/constants.dart';
 import 'package:weatherapp/ui/home.dart';
 
 class Welcome extends StatefulWidget {
-  const Welcome({Key? key}) : super(key: key);
+  const Welcome({super.key});
 
   @override
   State<Welcome> createState() => _WelcomeState();
@@ -23,7 +23,7 @@ class _WelcomeState extends State<Welcome> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: myConstants.secondaryColor,
-        title: Text(selectedCities.length.toString() + ' selected'),
+        title: Text('${selectedCities.length} selected'),
       ),
       body: ListView.builder(
         physics: const BouncingScrollPhysics(),

@@ -9,11 +9,11 @@ class DetailPage extends StatefulWidget {
   final String location;
 
   const DetailPage({
-    Key? key,
+    super.key,
     required this.consolidatedWeatherList,
     required this.selectedId,
     required this.location
-  }) : super(key: key);
+  });
 
   @override
   State<DetailPage> createState() => _DetailPageState();

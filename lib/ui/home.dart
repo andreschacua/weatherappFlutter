@@ -9,7 +9,7 @@ import 'package:weatherapp/widgets/weather_item.dart';
 
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
@@ -318,10 +318,8 @@ class _HomeState extends State<Home> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                consolidatedWeatherList[index]['main']['temp']
-                                        .round()
-                                        .toString() +
-                                    "C",
+                                "${consolidatedWeatherList[index]['main']['temp']
+                                        .round()}C",
                                 style: TextStyle(
                                   fontSize: 17,
                                   color: selectedDay == today
